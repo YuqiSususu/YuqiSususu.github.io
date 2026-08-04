@@ -1,0 +1,23 @@
+name: 'Submit URLs to IndexNow'
+
+on:
+  # 1. 当代码推送到 main 分支时自动触发[reference:9]
+  push:
+    branches:
+      - main
+  # 2. 允许你手动在 GitHub Actions 页面触发运行[reference:10]
+  workflow_dispatch:
+  # 3. (可选) 设置定时任务，例如每天 UTC 时间 2:00 运行
+  # schedule:
+  #   - cron: '0 2 * * *'
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: IndexNow Action
+        uses: bojieyang/indexnow-action@v2 # 使用封装好的 Action
+        with:
+          # 请将此 URL 替换为你的站点地图(sitemap)地址
+          sitemap-location: 'https://yuqisususu.github.io/sitemap.xml'
+          key: ${{ secrets.INDEXNOW_KEY }} # 引用你刚才设置的密钥
