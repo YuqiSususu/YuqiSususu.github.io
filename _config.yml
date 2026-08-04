@@ -9,11 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Yuqi Su's Homepage"
+title                    : "Yuqi Su | Acoustic & Wireless Sensing Researcher"
 title_separator          : "-"
 name                     : &name "Yuqi Su"
 description              : &description "Yuqi Su - Ph.D. student at ISCAS, researching acoustic and wireless sensing."   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://YuqiSu.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://hi-yuqi-su.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hi-yuqi-su/hi-yuqi-su.github.io"
