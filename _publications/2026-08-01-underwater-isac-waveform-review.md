@@ -5,7 +5,8 @@ category: conferences
 permalink: /publication/underwater-isac-waveform-review
 excerpt: 'A systematic review of underwater ISAC waveform design with a resource/function/task-driven taxonomy and quantitative trade-off analysis.'
 date: 2026-08-01
-venue: 'WASA 2026 (CCF-C)'
+venue: 'WASA 2026'
+authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Beihong Jin, <em>et al.</em>'
 citation: 'Yuqi Su, Fusang Zhang, Beihong Jin, et al. (2026). &quot;Towards Waveform Design for Underwater Acoustic Integrated Sensing and Communication: A Review.&quot; <i>WASA 2026 (CCF-C)</i>.'
 header:
   teaser: pub-underwater-isac.svg

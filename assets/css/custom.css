@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Yuqi's custom styles — icons, publication cards, typography
+   Yuqi's custom styles - icons, publication cards, typography
    Loaded AFTER main.css (via _includes/head/custom.html) so it wins.
    Uses the theme's --global-* CSS variables so it adapts to light/dark.
    ========================================================================== */
@@ -34,9 +34,14 @@
 }
 .page__content h2 + ul { margin-top: 0.3em; }
 .page__content h2 + ul > li { margin-bottom: 0.45em; }
+/* leading icon in a list right after a section header (e.g. trophy on News) */
+.page__content h2 + ul > li > i.fas {
+  color: var(--global-link-color);
+  margin-right: 0.4em;
+}
 
 /* ==========================================================================
-   Publication cards — /publications/
+   Publication cards - /publications/
    ========================================================================== */
 .pub-grid {
   display: grid;
@@ -97,12 +102,16 @@
 }
 .pub-card__venue i { color: var(--global-link-color); margin-right: 0.35em; }
 
-.pub-card__excerpt {
+/* author line (replaces the abstract excerpt on publication cards) */
+.pub-card__authors {
   margin: 0 0 0.8em;
-  font-size: 0.8rem;
-  line-height: 1.55;
-  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--global-text-color);
   flex: 1 1 auto;
+}
+.pub-card__authors strong {
+  color: var(--global-link-color);
 }
 
 .pub-card__link {
