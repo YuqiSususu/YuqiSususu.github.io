@@ -15,7 +15,7 @@ My research centers on **wireless sensing and acoustic sensing**, spanning in-ca
 ## <i class="fas fa-newspaper"></i> News
 
 - <i class="fas fa-trophy"></i> **Oct 2025** - Awarded the **2nd Prize** (25,000 USD) at the Global Wireless Sensing Challenge @ MobiCom 2025.
-- <i class="fas fa-trophy"></i> **Aug 2025** - Serving on the TPC of IEEE ICPADS 2025.
+- **Aug 2025** - Serving on the TPC of IEEE ICPADS 2025.
 - <i class="fas fa-trophy"></i> **Nov 2024** - Awarded the **First Prize** (Top 5) at the Wireless Sensing Technology Innovation Application Competition.
 - <i class="fas fa-trophy"></i> **Sep 2022** - Awarded the **First Prize** at the IPIN 2022 International Competition on Indoor Positioning and Indoor Navigation.
 
