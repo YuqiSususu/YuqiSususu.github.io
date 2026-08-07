@@ -6,7 +6,7 @@ permalink: /publication/multi-antenna-quantum-receiver
 excerpt: 'A multi-antenna quantum receiver that breaks through conventional angle-estimation constraints.'
 date: 2025-06-15
 venue: 'ACM MobiCom 2025'
-authors: 'Zhaodian He, Fusang Zhang, Junqi Ma, <strong>Yuqi Su</strong>, <em>et al.</em>'
+authors: 'Zhaodian He, Fusang Zhang, Junqi Ma, <strong>Yuqi Su</strong>, Beihong Jin, Daqing Zhang, Yuechun Jiao, Lili Qiu, Jie Xiong'
 citation: 'Zhaodian He, Fusang Zhang, Junqi Ma, Yuqi Su, et al. (2025). &quot;Multi-Antenna Quantum Receiver: A Leap Beyond Angle Estimation Constraints.&quot; <i>ACM MobiCom 2025 (CCF-A)</i>.'
 header:
   teaser: pub-multi-antenna.svg

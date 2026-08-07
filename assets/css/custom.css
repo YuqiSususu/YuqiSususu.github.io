@@ -66,9 +66,9 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
 }
 .pub-card__img {
-  flex: 0 0 150px;
-  width: 150px;
-  aspect-ratio: 4 / 3;           /* fixed ~112px tall, does NOT stretch with content */
+  flex: 0 0 180px;
+  width: 180px;
+  aspect-ratio: 4 / 3;           /* fixed ~135px tall, does NOT stretch with content */
   border-radius: 6px;
   overflow: hidden;
   background-color: var(--global-code-background-color);
@@ -138,7 +138,7 @@
 /* narrow screens: slightly smaller thumbnail */
 @media (max-width: 600px) {
   .pub-card { padding: 0.7em; gap: 0.8em; }
-  .pub-card__img { flex-basis: 110px; width: 110px; }
+  .pub-card__img { flex-basis: 130px; width: 130px; }
   .pub-card__title { font-size: 0.92rem; }
   .pub-card__venue { font-size: 0.75rem; }
   .pub-card__authors { font-size: 0.74rem; }

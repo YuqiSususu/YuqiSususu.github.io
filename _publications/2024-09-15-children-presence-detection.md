@@ -6,7 +6,7 @@ permalink: /publication/children-presence-detection
 excerpt: 'A low-cost, full-coverage in-cabin child-presence-detection system that extracts subtle respiration even under occlusion.'
 date: 2024-09-15
 venue: 'ACM UbiComp 2024'
-authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Kai Niu, <em>et al.</em>'
+authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Kai Niu, Tianben Wang, Beihong Jin, Zhi Wang, Yalan Jiang, Daqing Zhang, Lili Qiu, Jie Xiong'
 citation: 'Yuqi Su, Fusang Zhang, Kai Niu, et al. (2024). &quot;Embracing Distributed Acoustic Sensing in Car Cabin for Children Presence Detection.&quot; <i>ACM UbiComp 2024 (CCF-A)</i>.'
 paperurl: 'https://dl.acm.org/doi/10.1145/3643548'
 header:

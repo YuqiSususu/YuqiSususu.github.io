@@ -6,7 +6,7 @@ permalink: /publication/acoustic-focusing-multi-target
 excerpt: 'A distributed in-cabin acoustic-focusing system enabling multi-target respiration, driving-behavior, and gesture sensing without extra hardware.'
 date: 2025-09-15
 venue: 'ACM UbiComp 2025'
-authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Beihong Jin, <em>et al.</em>'
+authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Beihong Jin, Daqing Zhang'
 citation: 'Yuqi Su, Fusang Zhang, Beihong Jin, et al. (2025). &quot;Manipulation of Acoustic Focusing for Multi-target Sensing with Distributed Microphones in Smart Car Cabin.&quot; <i>ACM UbiComp 2025 (CCF-A)</i>.'
 header:
   teaser: pub-acoustic-focusing.svg
