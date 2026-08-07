@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Yuqi's custom styles — icons, publication cards, typography
+   Loaded AFTER main.css (via _includes/head/custom.html) so it wins.
+   Uses the theme's --global-* CSS variables so it adapts to light/dark.
+   ========================================================================== */
+
+/* ---- Base typography: slightly larger, more breathing room ---- */
+.page__content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.page__content p {
+  margin-bottom: 1.15em;
+}
+.page__content > p:first-of-type {
+  font-size: 1.05rem;
+}
+
+/* ---- Section headers that start with a Font Awesome icon ---- */
+.page__content h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--global-border-color);
+  font-size: 1.45rem;
+}
+.page__content h2 > i {
+  color: var(--global-link-color);
+  font-size: 0.85em;
+  line-height: 1;
+}
+.page__content h2 + ul { margin-top: 0.3em; }
+.page__content h2 + ul > li { margin-bottom: 0.45em; }
+
+/* ==========================================================================
+   Publication cards — /publications/
+   ========================================================================== */
+.pub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4em;
+  margin: 1.2em 0 2.2em;
+}
+@media (min-width: 48em) { .pub-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 80em) { .pub-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.pub-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--global-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.pub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.pub-card__img {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--global-code-background-color);
+}
+.pub-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease;
+}
+.pub-card:hover .pub-card__img img { transform: scale(1.04); }
+
+.pub-card__body {
+  padding: 0.85em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.pub-card__title {
+  margin: 0 0 0.4em;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.pub-card__title a { color: var(--global-text-color); text-decoration: none; }
+.pub-card__title a:hover { color: var(--global-link-color-hover); }
+
+.pub-card__venue {
+  margin: 0 0 0.6em;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+.pub-card__venue i { color: var(--global-link-color); margin-right: 0.35em; }
+
+.pub-card__excerpt {
+  margin: 0 0 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+  flex: 1 1 auto;
+}
+
+.pub-card__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: 0.78rem;
+  padding: 0.28em 0.8em;
+  border-radius: 999px;
+  border: 1px solid var(--global-border-color);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: background-color .18s, color .18s, border-color .18s;
+}
+.pub-card__link i { color: var(--global-link-color); }
+.pub-card__link:hover {
+  background-color: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: #fff;
+}
+.pub-card__link:hover i { color: #fff; }
+
+/* category heading on the publications page (archive layout) */
+.archive h2.pub-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--global-border-color);
+  font-size: 1.45rem;
+}
+.archive h2.pub-category-title > i {
+  color: var(--global-link-color);
+  font-size: 0.85em;
+}
