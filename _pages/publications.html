@@ -11,68 +11,34 @@ author_profile: true
   <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign posts = site.publications | where: "category", category[0] | reverse %}
-    {% if posts.size > 0 %}
-      <h2 class="pub-category-title"><i class="fas fa-folder-open"></i> {{ category[1].title }}</h2>
-      <div class="pub-grid">
-        {% for post in posts %}
-          <article class="pub-card">
-            {% if post.header.teaser %}
-              {% if post.paperurl %}
-                <a class="pub-card__img" href="{{ post.paperurl }}" target="_blank" rel="noopener">
-                  <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
-                </a>
-              {% else %}
-                <div class="pub-card__img">
-                  <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
-                </div>
-              {% endif %}
-            {% endif %}
-            <div class="pub-card__body">
-              <h3 class="pub-card__title">
-                {% if post.paperurl %}
-                  <a href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
-                {% else %}
-                  {{ post.title }}
-                {% endif %}
-              </h3>
-              <p class="pub-card__venue"><i class="fas fa-graduation-cap"></i>{{ post.venue }}</p>
-              {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
-              {% if post.paperurl %}
-                <a class="pub-card__link" href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fab fa-file-pdf"></i>Paper</a>
-              {% endif %}
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% endfor %}
-{% else %}
-  <div class="pub-grid">
-    {% for post in site.publications reversed %}
-      <article class="pub-card">
-        {% if post.header.teaser %}
-          {% if post.paperurl %}
-            <a class="pub-card__img" href="{{ post.paperurl }}" target="_blank" rel="noopener">
-              <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
-            </a>
-          {% else %}
-            <div class="pub-card__img">
-              <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
-            </div>
-          {% endif %}
+<div class="pub-list">
+  {% for post in site.publications reversed %}
+    <article class="pub-card">
+      {% if post.header.teaser %}
+        {% if post.paperurl %}
+          <a class="pub-card__img" href="{{ post.paperurl }}" target="_blank" rel="noopener">
+            <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
+          </a>
+        {% else %}
+          <div class="pub-card__img">
+            <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title | strip_html | escape }}" loading="lazy">
+          </div>
         {% endif %}
-        <div class="pub-card__body">
-          <h3 class="pub-card__title">
-            {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
-          </h3>
-          <p class="pub-card__venue"><i class="fas fa-graduation-cap"></i>{{ post.venue }}</p>
-          {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
-          {% if post.paperurl %}<a class="pub-card__link" href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fab fa-file-pdf"></i>Paper</a>{% endif %}
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-{% endif %}
+      {% endif %}
+      <div class="pub-card__body">
+        <h3 class="pub-card__title">
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
+          {% else %}
+            {{ post.title }}
+          {% endif %}
+        </h3>
+        <p class="pub-card__venue"><i class="fas fa-graduation-cap"></i>{{ post.venue }}</p>
+        {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
+        {% if post.paperurl %}
+          <a class="pub-card__link" href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fab fa-file-pdf"></i>Paper</a>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Yuqi's custom styles - icons, publication cards, typography
+   Yuqi's custom styles - icons, publication list, typography
    Loaded AFTER main.css (via _includes/head/custom.html) so it wins.
    Uses the theme's --global-* CSS variables so it adapts to light/dark.
    ========================================================================== */
@@ -41,36 +41,36 @@
 }
 
 /* ==========================================================================
-   Publication cards - /publications/
+   Publications - row layout: image left, title/venue/authors right
    ========================================================================== */
-.pub-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.4em;
-  margin: 1.2em 0 2.2em;
-}
-@media (min-width: 48em) { .pub-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 80em) { .pub-grid { grid-template-columns: repeat(3, 1fr); } }
-
-.pub-card {
+.pub-list {
   display: flex;
   flex-direction: column;
+  gap: 1.1em;
+  margin: 1.2em 0 2.2em;
+}
+.pub-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   border: 1px solid var(--global-border-color);
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--global-bg-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 130px;
 }
 .pub-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 .pub-card__img {
-  display: block;
-  aspect-ratio: 16 / 9;
+  flex: 0 0 200px;
+  width: 200px;
   overflow: hidden;
   background-color: var(--global-code-background-color);
+  display: block;
 }
 .pub-card__img img {
   width: 100%;
@@ -82,40 +82,39 @@
 .pub-card:hover .pub-card__img img { transform: scale(1.04); }
 
 .pub-card__body {
-  padding: 0.85em 1em 1em;
+  padding: 0.7em 1em;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  min-width: 0;
 }
 .pub-card__title {
-  margin: 0 0 0.4em;
+  margin: 0 0 0.25em;
   font-size: 1rem;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 .pub-card__title a { color: var(--global-text-color); text-decoration: none; }
 .pub-card__title a:hover { color: var(--global-link-color-hover); }
 
 .pub-card__venue {
-  margin: 0 0 0.6em;
+  margin: 0 0 0.4em;
   font-size: 0.8rem;
   color: var(--global-text-color-light);
 }
 .pub-card__venue i { color: var(--global-link-color); margin-right: 0.35em; }
 
-/* author line (replaces the abstract excerpt on publication cards) */
+/* author line (all authors; Yuqi Su bolded + accent) */
 .pub-card__authors {
-  margin: 0 0 0.8em;
-  font-size: 0.82rem;
+  margin: 0;
+  font-size: 0.8rem;
   line-height: 1.5;
   color: var(--global-text-color);
-  flex: 1 1 auto;
 }
-.pub-card__authors strong {
-  color: var(--global-link-color);
-}
+.pub-card__authors strong { color: var(--global-link-color); }
 
 .pub-card__link {
   align-self: flex-start;
+  margin-top: 0.5em;
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
@@ -135,18 +134,12 @@
 }
 .pub-card__link:hover i { color: #fff; }
 
-/* category heading on the publications page (archive layout) */
-.archive h2.pub-category-title {
-  display: flex;
-  align-items: center;
-  gap: 0.45em;
-  margin-top: 1.8em;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.3em;
-  border-bottom: 2px solid var(--global-border-color);
-  font-size: 1.45rem;
-}
-.archive h2.pub-category-title > i {
-  color: var(--global-link-color);
-  font-size: 0.85em;
+/* narrow screens: smaller thumbnail */
+@media (max-width: 600px) {
+  .pub-card { min-height: 96px; }
+  .pub-card__img { flex-basis: 110px; width: 110px; }
+  .pub-card__body { padding: 0.55em 0.7em; }
+  .pub-card__title { font-size: 0.92rem; }
+  .pub-card__venue { font-size: 0.75rem; }
+  .pub-card__authors { font-size: 0.74rem; }
 }
