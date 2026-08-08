@@ -9,7 +9,7 @@ venue: 'ACM UbiComp 2025'
 authors: '<strong>Yuqi Su</strong>, Fusang Zhang, Beihong Jin, Daqing Zhang'
 citation: 'Yuqi Su, Fusang Zhang, Beihong Jin, et al. (2025). &quot;Manipulation of Acoustic Focusing for Multi-target Sensing with Distributed Microphones in Smart Car Cabin.&quot; <i>ACM UbiComp 2025 (CCF-A)</i>.'
 header:
-  teaser: pub-acoustic-focusing.svg
+  teaser: pub-acoustic-focusing.jpg
 ---
 
 We designed and implemented a distributed in-cabin acoustic-focusing sensing system. We build a near-field 3D beamforming model, design dual-frequency difference-frequency signals to eliminate phase ambiguity, and construct an occupancy grid for multi-target localization. Without adding any hardware, the system enables multi-target respiration sensing, dangerous-driving-behavior detection, and gesture recognition, supporting non-contact sensing in the smart cabin.
