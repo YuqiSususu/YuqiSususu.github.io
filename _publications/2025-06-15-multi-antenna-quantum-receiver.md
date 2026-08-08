@@ -9,7 +9,7 @@ venue: 'ACM MobiCom 2025'
 authors: 'Zhaodian He, Fusang Zhang, Junqi Ma, <strong>Yuqi Su</strong>, Beihong Jin, Daqing Zhang, Yuechun Jiao, Lili Qiu, Jie Xiong'
 citation: 'Zhaodian He, Fusang Zhang, Junqi Ma, Yuqi Su, et al. (2025). &quot;Multi-Antenna Quantum Receiver: A Leap Beyond Angle Estimation Constraints.&quot; <i>ACM MobiCom 2025 (CCF-A)</i>.'
 header:
-  teaser: pub-multi-antenna.svg
+  teaser: pub-multi-antenna.jpg
 ---
 
 This work presents a multi-antenna quantum receiver that leaps beyond conventional angle-estimation constraints. (Co-authored.)
